@@ -1,4 +1,4 @@
-Access my site at : [Here](http://52.13.110.91) 
+Access my site at : [Here](http://52.13.97.158/) 
  
 Linux Server Setup 
 ================== 
@@ -23,6 +23,7 @@ Linux Server Setup
 	- Type: sudo apt-get install python-pip
 	- Type: sudo pip install virtualenv
 	- Type: sudo pip install Flask
+	- Type: sudo pip install requests
 	- Type: sudo pip install httplib2 oauth2client sqlalchemy psycopg2 sqlalchemy_utils
 
 3. Configure Ports
@@ -35,7 +36,7 @@ Linux Server Setup
 	- Type: sudo nano /etc/ssh/sshd_config
 	- Change: "Port 22" to "Port 2200"
 	- Type: (Ctrl + o)Enter(Ctrl + x) 
-	- Type: sudo service sshd restart
+	- Type: sudo service sshd restartss
 	- Type: sudo ufw default deny incoming
 	- Type: sudo ufw default allow outgoing
 	- Type: sudo ufw allow 2200/tcp
@@ -132,3 +133,10 @@ CustomLog ${APACHE_LOG_DIR}/access.log combined (Ctrl + o)(ENTER)(Ctrl + x)
 	- Type exit 
 	- Type python /var/www/catalog/Item-Catalog/database_setup.py 
 	- Type sudo service apache2 restart 
+
+Sources
+-------
+[Acess Logs](https://unix.stackexchange.com/questions/38978/where-are-apache-file-access-logs-stored) 
+[UFW](https://www.vultr.com/docs/how-to-configure-ufw-firewall-on-ubuntu-14-04
+) 
+[Linux Course](https://classroom.udacity.com/nanodegrees/nd004/parts/ab002e9a-b26c-43a4-8460-dc4c4b11c379)
